@@ -1,5 +1,4 @@
 * {
- 
   box-sizing: border-box;/*ajusta al tamaño de la caja*/
 }
 
@@ -60,12 +59,16 @@ nav a[aria-current='page'] {
   box-shadow: 5px 4px darkgray;
 
 }
+nav a:hover{
+  background-color: rgba(255, 0, 0, 0.422);
+
+}
 
 /*fin nav*/
 /*comienzo de main*/
 section{
   width: 900px;
-  height: 400px;
+  height: 520px;
   background-color: #555;
   margin:0 auto ;
   margin-bottom: 15px;
@@ -100,25 +103,59 @@ border-radius: 15px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
 }
-
+.mexico{
+  text-align: center;
+}
 #can{
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/250px-Flag_of_Canada_%28Pantone%29.svg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
+.Canada{
+  text-align: center;
+}
+.estadosunidos h2{
+  text-align: center;
+}
+table, tr, td,th{
+  border: solid red 2px;
+  border-collapse: collapse;
+  width: 400px;
+  margin: 0 auto;
+  }
+  tr :hover{
+  background-color: #555;
+  }
+  td img{
+  width: 200px;
+  }
 /*videos*/
 #video{
   width: 600px;
   height: 300px;
 }
-/*precentacion*/
-#precentacion{
+
+/*fin de main*/
+.presentacion{
   height: 600px;
 }
-/*fin de main*/
+
+.videos_locales{
+  background-color: #aa71;
+  width: 630px;
+  height: 320px;
+  border:#000 solid 7px;
+  box-shadow: #555 5px 2px;
+  text-align:center ;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+
+}
+
 /*comienazo del footer*/
 
 footer{
@@ -167,4 +204,56 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+}
+/* contennedor principal: divide el diseño en dos columnas (continentes y paises( */
+.campeones{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: 2px solid black;
+  width:  100%;
+
+}
+/*coolumna izquierda: continente ocupará todo el alto disponible automáticamente */
+.continente{
+  border-right: 2px solid black;
+ padding:  15px 10px;
+ font-weight: bold;
+ font-size: 14px;
+}
+/*columna derecha: se convierte en otro grid para organizar el contenido interno */
+.paises{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* el título del país ocupa las dos columnas */
+.país{
+
+  grid-column: span 2;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 2px solid black;
+}
+
+.foto{
+  min-height: 120px;
+  padding: 35px 10px 10px;
+  font-size: 11px;
+  border-bottom: 2px solid black;
+}
+/* borde vertical divisor solo en la primera foto */    
+.foto{
+  border-right: 2px solid black;
+
+}
+ /* la reseña se salta al fondo ocupando las dos columnas */
+.resenia{
+  grid-column: span 2;
+  padding: 10px;
+  min-height: 80px;
+  font-size: 11px;
+}
+
+.paises .foto img{
+  width: 100%;
 }
